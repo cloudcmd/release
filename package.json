@@ -14,7 +14,7 @@
     "build": "redrun rm:* mkdir install:* mv pack rm:*",
     "wisdom": "npm run build",
     "wisdom:done": "redrun upload",
-    "rm:lockfile": "rm package-lock.json"
+    "rm:lockfile": "rm -f package-lock.json"
   },
   "repository": {
     "type": "git",
