@@ -1,0 +1,35 @@
+{
+  "name": "release",
+  "version": "7.0.2",
+  "private": true,
+  "changelog": false,
+  "release": false,
+  "scripts": {
+    "mkdir": "mkdir -p cloudcmd/node_modules",
+    "install:cloudcmd": "echo 'INSTALL...'; cd cloudcmd && npm i cloudcmd && mv node_modules/cloudcmd/* ./ && cd ..",
+    "mv": "mv cloudcmd cloudcmd-v$wisdom_version",
+    "pack": "echo 'PACK...';jaguar -p cloudcmd-v$wisdom_version",
+    "rm:folder": "rm -rf cloudcmd-v$wisdom_version",
+    "upload": "putasset -u coderaiser -r cloudcmd -t v$wisdom_version -f cloudcmd-v$wisdom_version.tar.gz",
+    "build": "redrun rm:* mkdir install:* mv pack rm:*",
+    "wisdom": "npm run build",
+    "wisdom:done": "redrun upload",
+    "rm:lockfile": "rm package-lock.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloudcmd/release.git"
+  },
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cloudcmd/release/issues"
+  },
+  "homepage": "https://github.com/coderaiser/release",
+  "devDependencies": {
+    "jaguar": "^3.0.1",
+    "putasset": "^2.0.0",
+    "redrun": "^5.0.0"
+  },
+  "dependencies": {}
+}
