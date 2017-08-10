@@ -11,9 +11,8 @@
     "pack": "echo 'PACK...';jaguar -p cloudcmd-v$wisdom_version",
     "rm:folder": "rm -rf cloudcmd-v$wisdom_version",
     "upload": "putasset -u coderaiser -r cloudcmd -t v$wisdom_version -f cloudcmd-v$wisdom_version.tar.gz",
-    "build": "redrun rm:* mkdir install:* mv pack upload rm:*",
+    "build": "redrun mkdir install:* mv pack upload rm:*",
     "wisdom": "npm run build",
-    "rm:lockfile": "rm -f package-lock.json",
     "rm:tar": "rm -f *.tar.gz"
   },
   "repository": {
