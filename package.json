@@ -6,10 +6,10 @@
   "scripts": {
     "mkdir": "mkdir -p cloudcmd/node_modules",
     "install:cloudcmd": "echo 'INSTALL...'; cd cloudcmd && npm i cloudcmd && mv node_modules/cloudcmd/* ./ && cd ..",
-    "mv": "mv cloudcmd cloudcmd-v$wisdom_version",
-    "pack": "echo 'PACK...';jaguar -p cloudcmd-v$wisdom_version",
-    "rm:folder": "rm -rf cloudcmd-v$wisdom_version",
-    "upload": "putasset -u coderaiser -r cloudcmd -t v$wisdom_version -f cloudcmd-v$wisdom_version.tar.gz",
+    "mv": "mv cloudcmd cloudcmd-v$npm_package_version",
+    "pack": "echo 'PACK...';jaguar -p cloudcmd-v$npm_package_version",
+    "rm:folder": "rm -rf cloudcmd-v$npm_package_version",
+    "upload": "putasset -u coderaiser -r cloudcmd -t v$npm_package_version -f cloudcmd-v$npm_package_version.tar.gz",
     "build": "redrun mkdir install:* mv pack upload rm:*",
     "_wisdom": "npm run build",
     "rm:tar": "rm -f *.tar.gz"
