@@ -27,7 +27,7 @@
   "devDependencies": {
     "jaguar": "^3.0.1",
     "putasset": "^2.0.0",
-    "redrun": "^5.0.0"
+    "redrun": "^9.0.0"
   },
   "dependencies": {},
   "publishConfig": {
